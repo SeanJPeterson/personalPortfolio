@@ -1,0 +1,272 @@
+:root {
+    --navcolor: #6564be;
+    --navtext-color: #d0b1fe;
+    --bodycolor: #b1a4a0;
+    --projectcolor: #4b419b;
+    --contactcolor: #76564c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    display: block;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 61em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 28m) {
+    html {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--bodycolor);
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--navcolor);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+@media (max-width: 28em) {
+    nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        margin: 0.1rem;
+    }
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.nav-list a {
+    display: block;
+    padding: 2.2rem;
+    font-size: 2.5rem;
+    transition: transform 0.3s ease-in-out 0ms;
+}
+
+.nav-list a:hover {
+    transform: scale(1.5);
+}
+
+.nav-list a:active {
+    animation: 1.5s ease-in-out infinite dancing-words 
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--navtext-color);
+    display: block;
+}
+
+h1, h2 {
+    font-weight: 800;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+}
+
+p {
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.4rem;
+    font-style: italic;
+}
+
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #912a2b;
+    background-image: linear-gradient(42deg, #3a3d40 0%, #a14344 100%);
+}
+
+.project-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: var(--projectcolor);
+    background-image: linear-gradient(42deg, #39b7d9 0%, #483ccc 100%)
+}
+
+.project-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+}
+
+@media (max-width: 28em) {
+    .project-section-header {
+        font-size: 4rem
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+@media (max-width: 28em) {
+    .project-section {
+        padding: 4rem 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px
+}
+
+.btn.show-all-btn {
+    background: #3d3d3d;
+    font-size: 3rem;
+    transition: background 0.5s ease-in-out;
+}
+
+.btn.show-all-btn i {
+    font-size: 3rem;
+}
+
+.btn.show-all-btn:hover {
+    background: #245bd2;
+}
+
+.contacts-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: var(--contactcolor);
+    background-image: linear-gradient(42deg, #84838f 0%, #b2664e 100%)
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    font-size: 5rem;
+}
+
+.contact-links a {
+    display: block;
+    transition: transform 0.3s ease-in-out 0ms;
+}
+
+.contact-links a:hover {
+    transform: scale(1.5);
+}
+
+.contact-links a:active {
+    animation: 1.5s ease-in-out infinite dancing-words 
+}
+
+@keyframes dancing-words {
+    0% {
+        transform: rotate(25deg);
+    }
+
+    10% {
+        transform: rotate(-25deg);
+    }
+
+    20% {
+        transform: rotate(25deg);
+    }
+
+    30% {
+        transform: rotate(-25deg);
+    }
+
+    40% {
+        transform: rotate(25deg);
+    }
+
+    50% {
+        transform: rotate(-25deg);
+    }
+
+    60% {
+        transform: rotate(25deg);
+    }
+
+    70% {
+        transform: rotate(-25deg);
+    }
+
+    80% {
+        transform: rotate(25deg);
+    }
+
+    90% {
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        transform: rotate(25deg);
+    }
+}
